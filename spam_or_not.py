@@ -26,17 +26,14 @@ modelLR=table[0]
 modelNB=table[1]
 modelKNN=table[2]
 tfidf_S=table[3]
-file = open('pkl/Models_SS.pkl', 'rb')
+file = open('pkl/Models_SS1.pkl', 'rb')
 table2= pickle.load(file)
 file.close()
 model_SF_LR=table2[0]
 model_SF_NB=table2[1]
-model_SF_KNN=table2[2]
-modelLS=table2[3]
-modelLP=table2[4]
-tfidf_SS=table2[5]
+tfidf_SS1=table2[2]
 tableau_text=[]
-#
+
 
 # pre-processing text function 
 def clean_text(text):
@@ -57,7 +54,7 @@ st.sidebar.markdown("<h1 style='text-align: center; color: red;'>MAIL MENU</h1>"
 mail_text = st.sidebar.text_area("Entrez le contenu texte de votre mail :")
 option = st.sidebar.selectbox(
      'Quel algorithme choisissez-vous ?',
-     ('Logistic Regression', 'Naive Bayes', 'KNN','SelfTrainingClassifierLR','SelfTrainingClassifierNB','SelfTrainingClassifierKNN','LabelSpreading','LabelPropagation'))
+     ('Logistic Regression', 'Naive Bayes', 'KNN','SelfTrainingClassifierLR','SelfTrainingClassifierNB'))
 button = st.sidebar.button("Lancer")
 
 
@@ -88,28 +85,13 @@ if button:
      elif(option=='SelfTrainingClassifierLR'): 
            st.write("Pour déterminer la nature du mail, vous avez choisi SelfTrainingClassifier avec Logistic Regression.")
            st.write("D'après SelfTrainingClassifier, votre mail est :")
-           predicted= model_SF_LR.predict(tfidf_SS.transform(tableau_text).toarray())
+           predicted= model_SF_LR.predict(tfidf_SS1.transform(tableau_text).toarray())
            resultat=predicted[0]
      elif(option=='SelfTrainingClassifierNB'): 
            st.write("Pour déterminer la nature du mail, vous avez choisi SelfTrainingClassifier avec Naive Bayes.")
            st.write("D'après SelfTrainingClassifier, votre mail est :")
-           predicted= model_SF_NB.predict(tfidf_SS.transform(tableau_text).toarray())
+           predicted= model_SF_NB.predict(tfidf_SS1.transform(tableau_text).toarray())
            resultat=predicted[0]    
-     elif(option=='SelfTrainingClassifierKNN'): 
-           st.write("Pour déterminer la nature du mail, vous avez choisi SelfTrainingClassifier avec KNN.")
-           st.write("D'après SelfTrainingClassifier, votre mail est :")
-           predicted= model_SF_KNN.predict(tfidf_SS.transform(tableau_text).toarray())
-           resultat=predicted[0]
-     elif(option=='LabelSpreading'): 
-           st.write("Pour déterminer la nature du mail, vous avez choisi l'algorithme Label Spreading.")
-           st.write("D'après Label Spreading, votre mail est :")
-           predicted= modelLS.predict(tfidf_SS.transform(tableau_text).toarray())
-           resultat=predicted[0]
-     elif(option=='LabelPropagation'): 
-           st.write("Pour déterminer la nature du mail, vous avez choisi l'algorithme Label Propagation.")
-           st.write("D'après Label Propagation, votre mail est :")
-           predicted= modelLP.predict(tfidf_SS.transform(tableau_text).toarray())
-           resultat=predicted[0]
      # display of the result
      if(resultat==0):
          image = Image.open('picture/notspam.png')
