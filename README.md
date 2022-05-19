@@ -51,7 +51,7 @@ $ python -m pip install sklearn
 
 ## Démonstration
 
-> Nous avons également mis en place un [Dashboard](https://developer.mozilla.org/fr/docs/Web/JavaScript) en ligne permettant de mieux comprendre les concepts d'apprentissage supervisé, non supervisé et semi-supervisé et de pouvoir les tester dans le cas d'une classification entre SPAMS & HAMS.
+> Nous avons également mis en place une [version](https://share.streamlit.io/davidserruya/spamml/deploy/app.py) en ligne permettant de mieux comprendre les concepts d'apprentissage supervisé, non supervisé et semi-supervisé et de pouvoir les tester dans le cas d'une classification entre SPAMS & HAMS.
 
 ## GIT Commands
 
