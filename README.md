@@ -4,20 +4,20 @@
 
 ## Project Description
 
-> Pour effectuer notre analyse nous avons du tester et expliquer différents algorithmes de l'apprentissage supervisé, non supervisé et semi-supervisé :
+> Pour notre analyse nous nous sommes appuyés sur différents algorithmes supervisés, non supervisés et semi-supervisés :
 
-- Supervisé
+- Supervisés:
   - LogistiqueRegression
   - MultinomialNB
   - KNeighborsClassifier
-- Non Supervisé
+- Non Supervisés:
   - KMeans
   - MiniBatchKMeans
   - AgglomerativeClustering
-- Semi-Supervisé
-  - LogistiqueRegression
-  - MultinomialNB
-  - KNeighborsClassifier
+- Semi-Supervisés:
+  - Self Training Classifier avec LogistiqueRegression
+  - Self Training Classifier avec MultinomialNB
+  - Self Training Classifier avec KNeighborsClassifier
   - LabelSpreading
   - LabelPropagation
 
