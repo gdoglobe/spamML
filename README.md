@@ -81,4 +81,4 @@ aux documentations officielles ci-dessous :
 
 ## Contributors
 
-David Serruya, Steeven Alliel, Hanna Naccache, Gerard Dogolbe
+David Serruya, Steeven Alliel, Hanna Naccache, Gerard Dogolbe.
