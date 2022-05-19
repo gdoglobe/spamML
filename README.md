@@ -1,7 +1,6 @@
 # Machine Learning Project
 
-> Ce projet consiste à effectuer une analyse technique de la comparaison entre l'apprentissage supervisé, non supervisé et semi-supervisé afin de determiné si l'apprentissage semi-supervisé est aussi performant que l'apprentissage supervisé.
-> Il a été réaliser par Steeven Alliel Gerard Dogolbe Hanna Naccache David Serruya © 2022.
+> Ce projet est une analyse technique cherchant à comparer l'apprentissage supervisé, non supervisé et semi-supervisé afin de determiner la performance de l'apprentissage semi-supervisé.
 
 ## Project Description
 
@@ -24,11 +23,12 @@
 
 ## Project Description
 
-> Pour parfaire notre travail, nous avons réalisé une etude de cas sur un dataset d'email dans lequel nous avons appliqué l'apprentissage semi-supervisé afin de classifier les données en deux groupes : SPAMS & HAMS.
+> Notre étude de cas s'appuye sur un dataset de mails composé de hams et de spams. Nous nous sommes appuyés sur différents indicateurs pour pouvoir déterminer si l'apprentissage semi-supervisé et aussi performant que l'apprentissage supervisé.
+> Nous avons également crée une application capable de déterminer si un mail est un spam ou non. Il suffit simplement de choisir un mail et un algorithme.
 
 ## Prérequis
 
-c'est obligatoire d'avoir [Python](https://www.python.org/) d'installer sur sa machine:
+La présence de [Python](https://www.python.org/) sur la mchine est nécessaire.
 
 ## Build Setup
 
@@ -41,6 +41,8 @@ $ python -m pip install streamlit
 $ python -m pip install pandas
 # Installation de la dépendance sklearn
 $ python -m pip install sklearn
+# Lancer l'application
+$ streamlit run app.py
 ```
 
 ## Démonstration
@@ -76,3 +78,7 @@ aux documentations officielles ci-dessous :
 - [SKLearn docs](https://scikit-learn.org/stable/).
 - [Pandas docs](https://pandas.pydata.org/).
 - [streamlit docs](https://streamlit.io/)
+
+## Contributors
+
+David Serruya, Steeven Alliel, Hanna Naccache, Gerard Dogolbe
