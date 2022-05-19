@@ -19,14 +19,14 @@ lemmatizer = WordNetLemmatizer()
 nltk.download('wordnet')
 
 # recovery of previously registered models
-file = open('pkl/models_S.pkl', 'rb')
+file = open('pkl/Models_S.pkl', 'rb')
 table= pickle.load(file)
 file.close()
 modelLR=table[0]
 modelNB=table[1]
 modelKNN=table[2]
 tfidf_S=table[3]
-file = open('pkl/models_SS.pkl', 'rb')
+file = open('pkl/Models_SS.pkl', 'rb')
 table2= pickle.load(file)
 file.close()
 model_SF_LR=table2[0]
